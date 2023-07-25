@@ -1,0 +1,18 @@
+version: '3.7'
+
+services:
+  nvim:
+    hostname: nvim
+    container_name: nvim
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      # args:
+      #   - USER_NAME="docker"
+    restart: always
+    tty: true # コンテナを起動し続ける
+    # ports:
+      # - "9000:9000"
+# volumes:
+      ############  - ./src:/var/www/html
+      ############  - ./environments/php.ini:/usr/local/etc/php/php.ini:
