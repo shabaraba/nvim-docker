@@ -1,7 +1,7 @@
 FROM ubuntu:22.04
 
 RUN apt-get update -y && apt-get upgrade -y && \
-    apt-get install -y curl git ripgrep tar unzip vim wget make locales npdejs python3
+    apt-get install -y curl git ripgrep tar unzip vim wget make locales nodejs python3
 
 RUN git clone https://github.com/shabaraba/dotfiles.git
 RUN cd dotfiles && make install
